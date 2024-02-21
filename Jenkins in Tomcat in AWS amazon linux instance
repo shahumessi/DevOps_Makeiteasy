@@ -1,0 +1,29 @@
+yum update -y
+    
+yum install git -y
+git --version
+
+yum install java-11-openjdk -y
+sudo amazon-linux-extras install java-openjdk11 -y
+java -version
+    
+cd /opt/
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+tar -xvf apache-tomcat-9.0.86.tar.gz
+mv apache-tomcat-9.0.86 tomcat
+
+wget https://get.jenkins.io/war-stable/2.440.1/jenkins.war
+cp jenkins.war /opt/tomcat/webapps/
+ll /opt/tomcat/webapps/
+/opt/tomcat/bin/startup.sh
+
+vim /opt/tomcat/conf/tomcat-users.xml
+-NOTE: copy below code above "</tomcat-users>"
+<role rolename="manager-gui"/>
+<user username="admin" password="admin" roles="manager-gui"/>
+
+vim /opt/tomcat/webapps/manager/META-INF/context.xml
+-NOTE: copy below code to make tomact available for everyone.
+ allow=".*" />
+
+cat /root/.jenkins/secrets/initialAdminPassword
