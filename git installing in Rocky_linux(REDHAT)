@@ -20,3 +20,23 @@ export PATH=$PATH:/usr/local/git/bin
 exit with :wq!
 source ~/.bashrc
 git --version
+------------------------------------------------------------
+###################creation of new repository##############
+------------------------------------------------------------
+Content tracker--
+Git is a -Distibuted version control system
+git has 2 Repositories types:- Local and Remote Repositories
+local Repositories- has 
+1>working area :- new file , modified , deleted ,copy or moved,untracked files
+  git status -> to check the working directory files 
+  red color mean it is in working area
+
+2>staging area also has new file , modified , deleted ,copy or moved,untracked files
+  git add <filename>  or git restore --staged <filename> back to working area
+  green color   
+
+3>committed files
+git commit -m "message" <filename> or enter(to make allthe files go in one go)
+git status -> untracked file red in wo
+
+git push origin main
