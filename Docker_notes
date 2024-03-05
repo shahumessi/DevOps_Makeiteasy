@@ -1,0 +1,17 @@
+docker run -itd --name jenkis -h webserver --previleged=true centos /bin/bash
+
+docker run -itd --name build-server -h hostname --network cloudgen centos /bin/bash
+
+docker inspect  networkname 
+
+docker network ls
+docker network inspect <networkname>
+docker network inspect bridge
+docker network create --driver bridge <networkname>
+docker network ls
+docker network rm <networkname>
+can't delete the network if u have container 
+docker network rm 
+docker network disconnect "build-server"
+
+
