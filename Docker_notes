@@ -1,6 +1,6 @@
 docker run -itd --name jenkis -h webserver --previleged=true centos /bin/bash
 
-docker run -itd --name build-server -h hostname --network cloudgen centos /bin/bash
+docker run -itd --name build-server -h hostname --network networkname centos /bin/bash
 
 docker inspect  networkname 
 
@@ -14,4 +14,254 @@ can't delete the network if u have container
 docker network rm 
 docker network disconnect "build-server"
 
+docker run -itd --name jenkis -h webserver --previleged=true centos /bin/bash
+
+docker run -itd --name build-server -h hostname --network cloudgen centos /bin/bash
+
+docker inspect  networkname 
+
+docker network ls
+docker network inspect <networkname>
+docker network inspect bridge
+docker network create --driver bridge <networkname>
+docker network ls
+docker network rm <networkname>
+can't delete the network if u have container 
+docker network rm 
+docker network disconnect "build-server"
+               connect 
+               inspect bridge 
+               connect cloudgen build-server
+               docker pull centos
+33 docker network ls
+34 docker ps
+35 docker network inspect bridge
+36 docker iamges
+37 docker images
+38 docker run -itd --name jenkins -h jenkins --privileged=true centos /bin/bash
+39 docker ps
+40 docker inspect jenkins
+41 docker inspect bridge
+42 docker run -itd --name jenkins -h webserver --privileged=true centos /bin/bash
+43 docker run -itd --name webserver -h webserver --privileged=true centos /bin/bash
+44 docker inspect webserver
+45 docker inspect bridge
+46 docker network ls
+47 docker network create --driver bridge cloudgen
+48 docker network ls
+49 docker inspect clodgen
+50 docker inspect cloudgen
+51 docker run -itd --name build-server -h build-server --network cloudgen centos /bin/bash
+52 docker network inspect bridge
+53 docker inspect build-server
+54 docker network inspect cloudgen
+55 docker network create --dirver bridge cloud
+56 docker network create --driver bridge cloud
+57 docker network ls
+58 docker network rm cloudgen
+59 docker network rm cloud
+60 docker ps
+61 docker inspect build-server
+62 docker network disconnect "build-server"
+63 docker network disconnect cloudgen "build-server"
+64 docker inspect build-server
+65 docker inspect cloudgen
+66 docker ps
+67 docker attach build-server
+68 docker network ls
+69 docker network connect bridge build-server
+70 docker inspect build-server
+71 docker network inspect bridge
+72 docker network connect cloudgen build-server
+73 docker inspect build-server
+74 docker network create --driver bridge cloud
+75 docker network inspect cloud
+76 docker network connect cloud build-server
+77 docker inspect build-server
+78 docker network disconnect bridge build-server
+79 docker inspect build-server
+80 docker network disconnect cloud build-server
+81 docker inspect build-server
+82 docker network disconnect cloudgen build-server
+83 docker inspect build-server
+84 docker network ls
+85 docker network rm cloud
+86 docker network rm cloudgen
+87 docker network ls
+88 docker network create --dirver bridge cloudgen
+89 docker network create --driver bridge cloudgen
+90 docker network prune
+91 docker network create --driver bridge cloudgen
+92 docker network create --driver bridge cloudgen1
+93 docker network create --driver bridge cloud
+94 docker network create --driver bridge cloud1
+95 docker network ls
+96 docker network prune
+97 docker network create --driver bridge cloud1
+98 docker run -itd --network cloud1 centos /bin/bash
+99 docker network cloud1
+100 docker network inspect cloud1
+101 docker ps
+102 docker inspect priceless_albattani
+103 docker network inspect cloud1
+104 docker network
+105 history
+
+docker pull centos
+33 docker network ls
+34 docker ps
+35 docker network inspect bridge
+36 docker iamges
+37 docker images
+38 docker run -itd --name jenkins -h jenkins --privileged=true centos /bin/bash
+39 docker ps
+40 docker inspect jenkins
+41 docker inspect bridge
+42 docker run -itd --name jenkins -h webserver --privileged=true centos /bin/bash
+43 docker run -itd --name webserver -h webserver --privileged=true centos /bin/bash
+44 docker inspect webserver
+45 docker inspect bridge
+46 docker network ls
+47 docker network create --driver bridge cloudgen
+48 docker network ls
+49 docker inspect clodgen
+50 docker inspect cloudgen
+51 docker run -itd --name build-server -h build-server --network cloudgen centos /bin/bash
+52 docker network inspect bridge
+53 docker inspect build-server
+54 docker network inspect cloudgen
+55 docker network create --dirver bridge cloud
+56 docker network create --driver bridge cloud
+57 docker network ls
+58 docker network rm cloudgen
+59 docker network rm cloud
+60 docker ps
+61 docker inspect build-server
+62 docker network disconnect "build-server"
+63 docker network disconnect cloudgen "build-server"
+64 docker inspect build-server
+65 docker inspect cloudgen
+66 docker ps
+67 docker attach build-server
+68 docker network ls
+69 docker network connect bridge build-server
+70 docker inspect build-server
+71 docker network inspect bridge
+72 docker network connect cloudgen build-server
+73 docker inspect build-server
+74 docker network create --driver bridge cloud
+75 docker network inspect cloud
+76 docker network connect cloud build-server
+77 docker inspect build-server
+78 docker network disconnect bridge build-server
+79 docker inspect build-server
+80 docker network disconnect cloud build-server
+81 docker inspect build-server
+82 docker network disconnect cloudgen build-server
+83 docker inspect build-server
+84 docker network ls
+85 docker network rm cloud
+86 docker network rm cloudgen
+87 docker network ls
+88 docker network create --dirver bridge cloudgen
+89 docker network create --driver bridge cloudgen
+90 docker network prune
+91 docker network create --driver bridge cloudgen
+92 docker network create --driver bridge cloudgen1
+93 docker network create --driver bridge cloud
+94 docker network create --driver bridge cloud1
+95 docker network ls
+96 docker network prune
+97 docker network create --driver bridge cloud1
+98 docker run -itd --network cloud1 centos /bin/bash
+99 docker network cloud1
+100 docker network inspect cloud1
+101 docker ps
+102 docker inspect priceless_albattani
+103 docker network inspect cloud1
+104 docker network
+105 history
+
+
+
+
+
+
+
+
+
+docker pull centos
+33 docker network ls
+34 docker ps
+35 docker network inspect bridge
+36 docker iamges
+37 docker images
+38 docker run -itd --name jenkins -h jenkins --privileged=true centos /bin/bash
+39 docker ps
+40 docker inspect jenkins
+41 docker inspect bridge
+42 docker run -itd --name jenkins -h webserver --privileged=true centos /bin/bash
+43 docker run -itd --name webserver -h webserver --privileged=true centos /bin/bash
+44 docker inspect webserver
+45 docker inspect bridge
+46 docker network ls
+47 docker network create --driver bridge cloudgen
+48 docker network ls
+49 docker inspect clodgen
+50 docker inspect cloudgen
+51 docker run -itd --name build-server -h build-server --network cloudgen centos /bin/bash
+52 docker network inspect bridge
+53 docker inspect build-server
+54 docker network inspect cloudgen
+55 docker network create --dirver bridge cloud
+56 docker network create --driver bridge cloud
+57 docker network ls
+58 docker network rm cloudgen
+59 docker network rm cloud
+60 docker ps
+61 docker inspect build-server
+62 docker network disconnect "build-server"
+63 docker network disconnect cloudgen "build-server"
+64 docker inspect build-server
+65 docker inspect cloudgen
+66 docker ps
+67 docker attach build-server
+68 docker network ls
+69 docker network connect bridge build-server
+70 docker inspect build-server
+71 docker network inspect bridge
+72 docker network connect cloudgen build-server
+73 docker inspect build-server
+74 docker network create --driver bridge cloud
+75 docker network inspect cloud
+76 docker network connect cloud build-server
+77 docker inspect build-server
+78 docker network disconnect bridge build-server
+79 docker inspect build-server
+80 docker network disconnect cloud build-server
+81 docker inspect build-server
+82 docker network disconnect cloudgen build-server
+83 docker inspect build-server
+84 docker network ls
+85 docker network rm cloud
+86 docker network rm cloudgen
+87 docker network ls
+88 docker network create --dirver bridge cloudgen
+89 docker network create --driver bridge cloudgen
+90 docker network prune
+91 docker network create --driver bridge cloudgen
+92 docker network create --driver bridge cloudgen1
+93 docker network create --driver bridge cloud
+94 docker network create --driver bridge cloud1
+95 docker network ls
+96 docker network prune
+97 docker network create --driver bridge cloud1
+98 docker run -itd --network cloud1 centos /bin/bash
+99 docker network cloud1
+100 docker network inspect cloud1
+101 docker ps
+102 docker inspect priceless_albattani
+103 docker network inspect cloud1
+104 docker network
+105 history
 
