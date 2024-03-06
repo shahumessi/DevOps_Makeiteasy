@@ -33,12 +33,39 @@ source /root/.bashrc
 git --version 
 ##### Output ####
 git 2.43.2
-##############################################################################################
----------->installling JAVA :
-##############################################################################################
-ARM64 Compressed Archive  : 
-
 ##### If we want to remove git ######
 yum remove git -y
 
 hash -r
+##############################################################################################
+---------->installling JAVA :
+##############################################################################################
+Go to the bllow url and download java 8 or 11 or 17
+https://www.oracle.com/in/java/technologies/downloads/#java8
+
+x64 Compressed Archive : https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz 
+
+yum install fontconfig
+cd /opt
+tar -xvf jdk-17_linux-x64_bin.tar.gz 
+vim /root/.bashrc
+#git_path
+export PATH=$PATH:/usr/local/git/bin
+#java_path
+export JAVA_HOME=/opt/jdk-17.0.10/
+export PATH=$PATH:/opt/jdk-17.0.10/bin
+
+output:-
+[root@ip-172-31-1-159 opt]# java --version
+java 17.0.10 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+##############################################################################################
+---------->installling Mavan :
+##############################################################################################
+
+
+
+
+
