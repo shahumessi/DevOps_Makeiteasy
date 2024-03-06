@@ -1,4 +1,44 @@
 #############################################
-Softwares that need to be installed for CICD 
+Softwares  that we installed for CICD 
 #############################################
 GIT ,Java 17 ,Maven,Jenkings 
+##########################################################################################
+-------------->GIT Custom Installing <---------------------
+##########################################################################################
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y
+###### After that install these packages #########
+yum install gcc perl-ExtUtils-MakeMaker -y
+##### Then Chage to /opt
+cd /opt
+######## Then install the latest Git packages #########
+wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.43.2.tar.gz
+#### Then Exc the package ########
+tar xvf git-2.43.2.tar.gz
+###### Change to git latest one #####
+cd git-2.43.2
+##### Then give the following commands ######
+make prefix=/usr/local/git all
+make prefix=/usr/local/git install
+###### Then set the git path in the following file ####
+vim /root/.bashrc
+open the file 
+comes to the end of the file, then come to instert mode, copy the below line
+
+export PATH=$PATH:/usr/local/git/bin
+:wq (then save the file)
+
+##### Then source the file ######
+source /root/.bashrc
+#### How to check the git version #######
+git --version 
+##### Output ####
+git 2.43.2
+##############################################################################################
+---------->installling JAVA :
+##############################################################################################
+ARM64 Compressed Archive  : 
+
+##### If we want to remove git ######
+yum remove git -y
+
+hash -r
