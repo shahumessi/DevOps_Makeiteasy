@@ -64,6 +64,25 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing
 ##############################################################################################
 ---------->installling Mavan :
 ##############################################################################################
+go to below url 
+https://maven.apache.org/download.cgi
+Binary tar.gz archive :  https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+
+vim /root/.bashrc
+export M2_HOME=/opt/maven
+export M2=$M2_HOME/bin
+export PATH=$PATH:$M2
+
+source /root/.bashrc
+
+[root@ip-172-31-1-159 opt]# mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: /opt/maven
+Java version: 17.0.10, vendor: Oracle Corporation, runtime: /opt/jdk-17.0.10
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.10.209-198.858.amzn2.x86_64", arch: "amd64", family: "unix"
+
+
 
 
 
