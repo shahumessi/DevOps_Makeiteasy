@@ -1,7 +1,7 @@
 #############################################
-Softwares  that we installed for CICD 
+Softwares  that we installed for CI-CD 
 #############################################
-GIT ,Java 17 ,Maven,Jenkings 
+GIT ,Java 17 ,Maven,Jenkings , Tomcat
 ##########################################################################################
 -------------->GIT Custom Installing <---------------------
 ##########################################################################################
@@ -81,6 +81,54 @@ Maven home: /opt/maven
 Java version: 17.0.10, vendor: Oracle Corporation, runtime: /opt/jdk-17.0.10
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.10.209-198.858.amzn2.x86_64", arch: "amd64", family: "unix"
+
+##############################################################################################
+---------->installling Tomcat :
+##############################################################################################
+go to below url
+https://tomcat.apache.org/download-90.cgi
+
+core : tartz 
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+tar -xvf apache-tomcat-9.0.86.tar.gz
+mv apache-tomcat-9.0.86.tar.gz tomcat
+
+##############################################################################################
+---------->installling Jenkins:
+##############################################################################################
+
+Download Jenkins 2.440.1 LTS for:
+Generic Java package (.war)
+https://get.jenkins.io/war-stable/2.440.1/jenkins.war
+
+##############################################################################################
+---------->installling tomcat:
+##############################################################################################
+
+
+
+
+###### Giving access to the tomcat ########
+vim /opt/tomcat/webapps/manager/META-INF/context.xml 
+come to line no.22 
+earse the matter in that line & give these ".*"
+Then save the file 
+:wq
+
+##### Then give the user & password to the Tomcat server & Deployer to the container user & password ########
+vim /opt/tomcat/conf/tomcat-user.xml
+come to line no.48 & add the following details: 
+
+<role rolename="manager-gui"/>
+<user username="admin" password="admin" roles="manager-gui" />
+<role rolename="manager-script" />
+<user username="deployer" password="deployer" roles="manager-script" />
+Then save the file 
+:wq
+
+
+
+
 
 
 
